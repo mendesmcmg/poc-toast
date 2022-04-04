@@ -3,16 +3,7 @@ import { ToastContext } from "../context/ToastContext";
 import "./Toast.css";
 
 function Toast() {
-  const { state, dispatch } = useContext(ToastContext);
-
-  function handleClose(id) {
-    dispatch({
-      type: "DELETE_NOTIFICATION",
-      payload: id,
-    });
-  }
-  // problema: quando vai mais de uma, a última a ser criada 
-  // é a primeira a ser deletada e a primeira não some
+  const { state } = useContext(ToastContext);
 
   return (
     <div className="notification-container bottom-right">
@@ -27,10 +18,6 @@ function Toast() {
             key={index}
             className="notification toast bottom-right"
           >
-            {/* <button
-              onClick={() => handleClose(index)}
-              className="close-button"
-            /> */}
 
               <span className="notification-message">{notification.message}</span>
               {notification.link && (

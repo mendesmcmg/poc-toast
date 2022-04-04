@@ -6,28 +6,10 @@
   font-family: Arial, Helvetica, sans-serif;  
 }
 
-.top-right {
-  top: 12px;
-  right: 12px;
-  animation: toast-in-right 0.7s;
-}
-
 .bottom-right {
   bottom: 12px;
   right: 12px;
   animation: toast-in-right 0.7s;
-}
-
-.top-left {
-  top: 12px;
-  left: 12px;
-  animation: toast-in-left 0.7s;
-}
-
-.bottom-left {
-  bottom: 12px;
-  left: 12px;
-  animation: toast-in-left 0.7s;
 }
 
 .notification {
@@ -64,14 +46,6 @@
 .toast {
   color: #fff;
   padding: 20px;
-}
-
-.close-button {
-  position: absolute;
-  top: 4px;
-  right: 8px;
-  width: 20px;
-  height: 20px;  
 }
 
 @keyframes toast-in-right {

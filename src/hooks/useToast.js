@@ -1,5 +1,3 @@
-// useToast: trigger toast with type (success or error) and message
-// useToast code is below:
 import { useContext } from "react";
 import { ToastContext } from "../context/ToastContext";
 
@@ -29,7 +27,7 @@ const useToast = () => {
         type: "CLEAR_NOTIFICATIONS",
         payload: id,
       });
-    }, 4500);
+    }, 5000);
   }
 
   return toast;
