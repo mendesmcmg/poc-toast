@@ -24,6 +24,12 @@ const useToast = () => {
         payload: id,
       });
     }, 3000);
+    setTimeout(() => {
+      dispatch({
+        type: "CLEAR_NOTIFICATIONS",
+        payload: id,
+      });
+    }, 4500);
   }
 
   return toast;
