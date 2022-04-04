@@ -15,7 +15,7 @@ const useToast = () => {
         message,
         link,
         linkMessage: "Learn more",
-        color: type === "success" ? "#4BB543" : "#E74C3C"
+        color: type === "success" ? "#4BB543" : "#EF5350"
       },
     });
     setTimeout(() => {

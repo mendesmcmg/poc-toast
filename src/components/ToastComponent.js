@@ -15,7 +15,7 @@ function Toast() {
   // é a primeira a ser deletada e a primeira não some
 
   return (
-    <div className="notification-container top-left">
+    <div className="notification-container bottom-right">
       {state.map((notification) => {
         console.log(notification);
         const index = state.indexOf(notification);
@@ -27,12 +27,12 @@ function Toast() {
             key={index}
             className="notification toast bottom-right"
           >
-            <button
+            {/* <button
               onClick={() => handleClose(index)}
               className="close-button"
-            />
+            /> */}
 
-              <p className="notification-message">{notification.message}</p>
+              <span className="notification-message">{notification.message}</span>
               {notification.link && (
                 <a href={notification.link}>
                   {notification.linkMessage}

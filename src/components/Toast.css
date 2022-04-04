@@ -3,7 +3,7 @@
   box-sizing: border-box;
   position: fixed;
   z-index: 9999;
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: Arial, Helvetica, sans-serif;  
 }
 
 .top-right {
@@ -37,74 +37,41 @@
   pointer-events: auto;
   overflow: hidden;
   margin: 0 0 6px;
-  padding: 20px;
   margin-bottom: 15px;
   width: 300px;
-  max-height: 100px;
-  border-radius: 3px;
-  box-shadow: 0 0 10px #999;
   color: #000;
   opacity: 0.9;
+  box-shadow: 0px 4px 12px rgba(24, 86, 105, 0.15);
+  border-radius: 8px;
 }
 
 .notification:hover {
-  box-shadow: 0 0 12px #fff;
+  box-shadow: 0px 4px 12px rgba(24, 86, 105, 0.15);
   opacity: 1;
   cursor: pointer;
-}
-
-.notification-title {
-  font-weight: 700;
-  font-size: 16px;
-  text-align: left;
-  margin-top: 0;
-  margin-bottom: 6px;
-  width: 300px;
-  height: 18px;
 }
 
 .notification-message {
   margin: 0;
   text-align: left;
-  height: 18px;
   margin-left: -1px;
   overflow: hidden;
   text-overflow: ellipsis;
   white-space: nowrap;
-}
-
-.notification-image {
-  float: left;
-  margin-right: 15px;
-  font-size: 36px;
+  font-size: 14px;
 }
 
 .toast {
-  height: 50px;
-  width: 365px;
   color: #fff;
-  padding: 15px;
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-}
-
-.content-container {
-  display: flex;
-}
-
-a {
-  color: #fff;
-  text-decoration: none;
+  padding: 20px;
 }
 
 .close-button {
   position: absolute;
   top: 4px;
   right: 8px;
-  font-size: 24px;
-  height: 20px;
   width: 20px;
+  height: 20px;  
 }
 
 @keyframes toast-in-right {
@@ -123,4 +90,12 @@ a {
   to {
     translate: translateX(0);
   }
+}
+
+a {
+  float: right;
+  text-decoration: none;
+  color: #fff;
+  font-size: 14px;
+  font-weight: bold;
 }

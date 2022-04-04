@@ -16,7 +16,7 @@ const App = () => {
         </button>
         <button
           className="button button--error"
-          onClick={() => toast("error", "HAHAY")}
+          onClick={() => toast("error", "Transaction Failed", "www.google.com")}  
         >
           ERROR
         </button>
