@@ -17,6 +17,7 @@ function Toast() {
   return (
     <div className="notification-container top-left">
       {state.map((notification) => {
+        console.log(notification);
         const index = state.indexOf(notification);
         return (
           <div
@@ -24,15 +25,19 @@ function Toast() {
               backgroundColor: state[index].color,
             }}
             key={index}
-            className="notification toast top-left"
+            className="notification toast bottom-right"
           >
             <button
               onClick={() => handleClose(index)}
               className="close-button"
             />
-            <div>
+
               <p className="notification-message">{notification.message}</p>
-            </div>
+              {notification.link && (
+                <a href={notification.link}>
+                  {notification.linkMessage}
+                </a>
+              )}
           </div>
         );
       })}

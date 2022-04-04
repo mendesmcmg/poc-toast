@@ -10,7 +10,7 @@ const App = () => {
       <div className="main-content">
         <button
           className="button button--success"
-          onClick={() => toast("success", "oieeee")}
+          onClick={() => toast("success", "oieeee", "https://www.google.com")}
         >
           SUCCESS
         </button>

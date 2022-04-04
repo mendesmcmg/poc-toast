@@ -5,7 +5,7 @@ import { ToastContext } from "../context/ToastContext";
 
 const useToast = () => {
   const { state, dispatch } = useContext(ToastContext);
-  function toast(type, message) {
+  function toast(type, message, link) {
     const id = state.length;
     dispatch({
       type: "ADD_NOTIFICATION",
@@ -13,7 +13,9 @@ const useToast = () => {
         id,
         type,
         message,
-        color: type === "success" ? "#4BB543" : "#E74C3C",
+        link,
+        linkMessage: "Learn more",
+        color: type === "success" ? "#4BB543" : "#E74C3C"
       },
     });
     setTimeout(() => {
