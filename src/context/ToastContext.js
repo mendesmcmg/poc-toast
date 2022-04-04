@@ -21,6 +21,7 @@ export const ToastContextProvider = (props) => {
               index !== action.payload && index !== action.payload - 1
           );
         }
+        break;
       default:
         return state;
     }
