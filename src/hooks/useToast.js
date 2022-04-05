@@ -4,7 +4,7 @@ import { ToastContext } from "../context/ToastContext";
 const useToast = () => {
   const { state, dispatch } = useContext(ToastContext);
   function toast(type, message, link) {
-    const id = state.length;
+    const id = Math.random();
     dispatch({
       type: "ADD_NOTIFICATION",
       payload: {
@@ -21,13 +21,7 @@ const useToast = () => {
         type: "DELETE_NOTIFICATION",
         payload: id,
       });
-    }, 3000);
-    setTimeout(() => {
-      dispatch({
-        type: "CLEAR_NOTIFICATIONS",
-        payload: id,
-      });
-    }, 5000);
+    }, 4000);
   }
 
   return toast;

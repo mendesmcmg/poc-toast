@@ -11,17 +11,9 @@ export const ToastContextProvider = (props) => {
         return [...state, action.payload];
       case "DELETE_NOTIFICATION":
         const updatedToasts = state.filter(
-          (notification, index) => index !== action.payload
+          (notification) => notification.id !== action.payload
         );
         return updatedToasts;
-      case "CLEAR_NOTIFICATIONS":
-        if (action.payload > 0) {
-          return state.filter(
-            (notification, index) =>
-              index !== action.payload && index !== action.payload - 1
-          );
-        }
-        break;
       default:
         return state;
     }
